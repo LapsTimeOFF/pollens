@@ -1,6 +1,6 @@
 "use strict";
-import { nodemailer } from "nodemailer"
-import * as config from "./config.json"
+const nodemailer = require('nodemailer')
+const config = require('./config.json')
 const log = console.log;
 
 async function main() { // J'utilise async pour le sendMail
@@ -20,3 +20,5 @@ async function main() { // J'utilise async pour le sendMail
 
     log('Email envoyé');
 }
+
+main().catch(console.error);
