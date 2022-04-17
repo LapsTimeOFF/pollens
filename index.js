@@ -13,6 +13,8 @@ function htmlForm(res) {
         
         final = final + `<br><br><u>${risk.pollenName} :</u><br>    Niveau : ${risk.level}`
     }
+
+    return final
 }
 
 async function main() { // J'utilise async pour le sendMail
@@ -39,7 +41,7 @@ async function main() { // J'utilise async pour le sendMail
         from: '"Pollen Info" <'+config.smtp.auth.user+'>', // J'utilise la config pour éviter de leak mon mail perso :|
         to: config.receivers, // Le spam... C'EST MAL. et c'est chiant.
         subject: "Bilan Pollen",
-        html: `<b>Bonjour,</b><br><br><p>Voici le bilan d'alerte pollen pour le département <b>${result.countyNumber} - ${result.countyName}</b> :<br>Niveau d'alert du département : ${result.riskLevel}</p><br><br>${htmlForm(result.risks)}`
+        html: `<b>Bonjour,</b><br><br><p>Voici le bilan d'alerte pollen pour le département <b>${result.countyNumber} - ${result.countyName}</b> :<br>Niveau d'alerte du département : ${result.riskLevel}</p>${htmlForm(result.risks)}`
     })
     log('Email envoyé');
 }
