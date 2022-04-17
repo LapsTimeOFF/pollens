@@ -8,5 +8,6 @@
             "pass": "verygoodpassword"
         }
     },
-    "receivers": "autreemail@mail.server"
+    "receivers": "autreemail@mail.server",
+    "countyNumber": "31"
 }
