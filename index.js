@@ -5,14 +5,14 @@ const axios = require('axios')
 const JSON5 = require('json5')
 const log = console.log;
 
-let color = "black"
+let color = "#00aeff"
 
 function htmlForm(res) {
     let final = ""
 
     for (let _i = 0; _i < res.length; _i++) {
         const risk = res[_i];
-        color = "black"
+        color = "#00aeff"
 
         if(risk.level === 1)
             color = "#00ff00" // vert
