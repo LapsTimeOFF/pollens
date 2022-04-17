@@ -5,12 +5,14 @@ const axios = require('axios')
 const JSON5 = require('json5')
 const log = console.log;
 
+let color = "black"
+
 function htmlForm(res) {
     let final = ""
 
     for (let _i = 0; _i < res.length; _i++) {
         const risk = res[_i];
-        let color = "black"
+        color = "black"
 
         if(risk.level === 1)
             color = "#00ff00" // vert
@@ -45,11 +47,18 @@ async function main() { // J'utilise async pour le sendMail
     
     // log(result) DEBUG
 
+    if(result.riskLevel === 1)
+            color = "#00ff00" // vert
+        else if(result.riskLevel === 2)
+            color = "#ffee00" // Jaune
+        else if(result.riskLevel === 3)
+            color = "#ff0000" // Rouge
+
     await transporter.sendMail({
         from: '"Pollen Info" <'+config.smtp.auth.user+'>', // J'utilise la config pour éviter de leak mon mail perso :|
         to: config.receivers, // Le spam... C'EST MAL. et c'est chiant.
         subject: "Bilan Pollen",
-        html: `<b>Bonjour,</b><br><br><p>Voici le bilan d'alerte pollen pour le département <b>${result.countyNumber} - ${result.countyName}</b> :<br>Niveau d'alerte du département : ${result.riskLevel}</p>${htmlForm(result.risks)}`
+        html: `<b>Bonjour,</b><br><br><p>Voici le bilan d'alerte pollen pour le département <b>${result.countyNumber} - ${result.countyName}</b> :<br>Niveau d'alerte du département :</p> <p style="color: ${color};">${result.riskLevel}</p>${htmlForm(result.risks)}`
     })
     log('Email envoyé');
 }
