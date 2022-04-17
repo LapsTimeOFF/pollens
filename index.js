@@ -10,8 +10,16 @@ function htmlForm(res) {
 
     for (let _i = 0; _i < res.length; _i++) {
         const risk = res[_i];
-        
-        final = final + `<br><br><u>${risk.pollenName} :</u><br>    Niveau : ${risk.level}`
+        let color = "black"
+
+        if(risk.level === 1)
+            color = "green"
+        else if(risk.level === 2)
+            color = "#adac68" // Jaune
+        else if(risk.level === 3)
+            color = "red"
+
+        final = final + `<br><br><u>${risk.pollenName} :</u><br>Niveau : <p style="color: ${color};">${risk.level}</p>`
     }
 
     return final
