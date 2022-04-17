@@ -15,7 +15,7 @@ function htmlForm(res) {
         if(risk.level === 1)
             color = "#00ff00" // vert
         else if(risk.level === 2)
-            color = "#adac68" // Jaune
+            color = "#ffee00" // Jaune
         else if(risk.level === 3)
             color = "#ff0000" // Rouge
 
