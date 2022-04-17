@@ -4,7 +4,8 @@
   "description": "Alerte par email des niveau de pollens en France",
   "main": "index.ts",
   "scripts": {
-    "test": "nodemon"
+    "dev": "nodemon",
+    "start": "ts-node server.ts"
   },
   "repository": {
     "type": "git",
