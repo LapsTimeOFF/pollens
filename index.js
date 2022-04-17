@@ -39,11 +39,11 @@ async function main() { // J'utilise async pour le sendMail
         .get(`https://pollens.fr/risks/thea/counties/${config.countyNumber}`)
         .then(res => {
             console.log(`statusCode: ${res.status}`)
-            console.log(res.data)
+            // log(res.data) DEBUG
             result = res.data
         })
     
-    log(result)
+    // log(result) DEBUG
 
     await transporter.sendMail({
         from: '"Pollen Info" <'+config.smtp.auth.user+'>', // J'utilise la config pour éviter de leak mon mail perso :|
