@@ -13,11 +13,11 @@ function htmlForm(res) {
         let color = "black"
 
         if(risk.level === 1)
-            color = "green"
+            color = "#00ff00" // vert
         else if(risk.level === 2)
             color = "#adac68" // Jaune
         else if(risk.level === 3)
-            color = "red"
+            color = "#ff0000" // Rouge
 
         final = final + `<br><br><u>${risk.pollenName} :</u><br>Niveau : <p style="color: ${color};">${risk.level}</p>`
     }
