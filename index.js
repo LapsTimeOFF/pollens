@@ -5,21 +5,21 @@ const axios = require('axios')
 const JSON5 = require('json5')
 const log = console.log;
 
-let color = "#00aeff"
+let color = config.colors.blue
 
 function htmlForm(res) {
     let final = ""
 
     for (let _i = 0; _i < res.length; _i++) {
         const risk = res[_i];
-        color = "#00aeff"
+        color = config.colors.blue
 
         if(risk.level === 1)
-            color = "#00ff00" // vert
+            color = config.colors.green
         else if(risk.level === 2)
-            color = "#ffee00" // Jaune
+            color = config.colors.yellow
         else if(risk.level === 3)
-            color = "#ff0000" // Rouge
+            color = config.colors.red
 
         final = final + `<br><br><u>${risk.pollenName} :</u><br>Niveau : <p style="color: ${color};">${risk.level}</p>`
     }
@@ -48,11 +48,11 @@ async function main() { // J'utilise async pour le sendMail
     // log(result) DEBUG
 
     if(result.riskLevel === 1)
-            color = "#00ff00" // vert
+            color = config.colors.green
         else if(result.riskLevel === 2)
-            color = "#ffee00" // Jaune
+            color = config.colors.yellow
         else if(result.riskLevel === 3)
-            color = "#ff0000" // Rouge
+            color = config.colors.red
 
     await transporter.sendMail({
         from: '"Pollen Info" <'+config.smtp.auth.user+'>', // J'utilise la config pour éviter de leak mon mail perso :|
