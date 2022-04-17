@@ -1,0 +1,23 @@
+{
+  "name": "pollens",
+  "version": "0.0.0",
+  "description": "Alerte par email des niveau de pollens en France",
+  "main": "index.ts",
+  "scripts": {
+    "test": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LapsTimeOFF/pollens.git"
+  },
+  "keywords": [
+    "pollens",
+    "france"
+  ],
+  "author": "Quentin MASSOT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LapsTimeOFF/pollens/issues"
+  },
+  "homepage": "https://github.com/LapsTimeOFF/pollens#readme"
+}
