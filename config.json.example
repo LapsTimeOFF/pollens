@@ -7,5 +7,6 @@
             "user": "email@example.com",
             "pass": "verygoodpassword"
         }
-    }
+    },
+    "receivers": "autreemail@mail.server"
 }
