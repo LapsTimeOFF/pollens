@@ -9,7 +9,7 @@ const app = express();
 
 async function main() {
     createLink('/', expressHandler.sendIndex)
-    createLink('/api/v1/mail', expressHandler.sendIndex)
+    createLink('/api/v1/mail', expressHandler.sendMail)
     startExpress(config.api.port)
 }
 
