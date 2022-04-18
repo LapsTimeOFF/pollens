@@ -11,9 +11,9 @@
     "receivers": "autreemail@mail.server",
     "countyNumber": "31",
     "colors": [
-        "#ff0000", 
+        "00aeff",
         "#00ff00",
         "#ffee00",
-        "00aeff"
+        "#ff0000" 
     ]
 }
