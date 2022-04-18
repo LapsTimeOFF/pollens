@@ -46,7 +46,7 @@ async function sendMail() { // J'utilise async pour le sendMail
 }
 
 async function main() {
-    
+    startExpress(config.api.port)
 }
 
 async function startExpress(port) {
