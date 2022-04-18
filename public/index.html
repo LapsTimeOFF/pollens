@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pollens - Accueil</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function httpGet(theUrl) {
+            let xmlHttpReq = new XMLHttpRequest();
+            xmlHttpReq.open("GET", theUrl, false); 
+            xmlHttpReq.send(null);
+            return xmlHttpReq.responseText;
+        }
+
+        $('document').ready(() => {
+            $('#send').click(() => {
+                let res = httpGet('/api/v1/mail')
+                res = JSON.parse(res)
+
+                if(res.statusCode === 200) {
+                    alert('Mail envoyé !')
+                } else {
+                    alert('Une erreur est survenue. statusCode = ' + res.statusCode)
+                }
+            })
+        })
+    </script>
 </head>
 <body>
-    
+    <button id="send">Envoyer le mail</button>
 </body>
 </html>
