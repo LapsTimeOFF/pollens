@@ -13,7 +13,7 @@ function htmlForm(res) {
         const risk = res[_i];
         color = config.colors[risk.level]
 
-        final = final + `<br><br><u>${risk.pollenName} :</u><br>Niveau : <p style="color: ${color};">${risk.level}</p>`
+        final += `<br><br><u>${risk.pollenName} :</u><br>Niveau : <p style="color: ${color};">${risk.level}</p>`
     }
 
     return final
