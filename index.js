@@ -20,12 +20,7 @@ function htmlForm(res) {
 }
 
 async function main() { // J'utilise async pour le sendMail
-    const transporter = nodemailer.createTransport({
-        host: config.smtp.host,
-        port: config.smtp.port,
-        secure: config.smtp.secure, 
-        auth: config.smtp.auth
-    })
+    const transporter = nodemailer.createTransport(config.smtp)
     
     let result = ""
 
