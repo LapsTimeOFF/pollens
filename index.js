@@ -1,4 +1,7 @@
 const config = require('./config.json')
+
+const mail = require('./mail')
+
 const express = require('express')
 const log = console.log;
 
