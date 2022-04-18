@@ -1,0 +1,1 @@
+const mail = require('./mail')
