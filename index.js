@@ -39,7 +39,7 @@ async function main() { // J'utilise async pour le sendMail
     
     // log(result) DEBUG
 
-    color = config.colors[risk.level]
+    color = config.colors[result.riskLevel]
 
     await transporter.sendMail({
         from: '"Pollen Info" <'+config.smtp.auth.user+'>', // J'utilise la config pour éviter de leak mon mail perso :|
