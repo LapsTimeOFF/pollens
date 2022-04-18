@@ -10,11 +10,11 @@
     },
     "receivers": "autreemail@mail.server",
     "countyNumber": "31",
-    "colors": {
-        "red": "#ff0000",
-        "green": "#00ff00",
-        "yellow": "#ffee00",
-        "blue": "00aeff",
-        "blue": "00aeff"
-    }
+    "colors": [
+        "#ff0000", 
+        "#00ff00",
+        "#ffee00",
+        "00aeff",
+        "00aeff"
+    ]
 }
