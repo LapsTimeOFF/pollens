@@ -2,7 +2,6 @@
 const nodemailer = require('nodemailer')
 const config = require('./config.json')
 const axios = require('axios')
-const JSON5 = require('json5')
 const log = console.log;
 
 let color = config.colors.default
