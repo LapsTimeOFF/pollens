@@ -27,7 +27,6 @@
   "dependencies": {
     "axios": "^0.26.1",
     "https": "^1.0.0",
-    "json5": "^2.2.1",
     "nodemailer": "^6.7.3"
   }
 }
