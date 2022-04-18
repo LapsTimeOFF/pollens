@@ -34,7 +34,7 @@ async function sendMail() { // J'utilise async pour le sendMail
     color = config.colors[result.riskLevel]
 
     await transporter.sendMail({
-        from: '"Pollen Info" <'+config.smtp.auth.user+'>', // J'utilise la config pour éviter de leak mon mail perso :|
+        from: '"Pollen Info"',
         to: config.receivers, // Le spam... C'EST MAL. et c'est chiant.
         subject: "Bilan Pollen",
         html: `<b>Bonjour,</b><br><br><p>Voici le bilan d'alerte pollen pour le département <b>${result.countyNumber} - ${result.countyName}</b> :<br>Niveau d'alerte du département :</p> <p style="color: ${color};">${result.riskLevel}</p>${htmlForm(result.risks)}`
