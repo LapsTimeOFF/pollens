@@ -18,6 +18,7 @@ async function createLink(url, handler) {
     app.get(url, (req, res) => {
         handler(req, res)
     })
+    log(`Link Register : URL : ${url}`)
 }
 
 async function startExpress(port) {
