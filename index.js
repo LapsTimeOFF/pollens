@@ -5,7 +5,7 @@ const axios = require('axios')
 const JSON5 = require('json5')
 const log = console.log;
 
-let color = config.colors.blue
+let color = config.colors.default
 
 function htmlForm(res) {
     let final = ""
