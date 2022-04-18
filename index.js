@@ -28,11 +28,8 @@ async function main() { // J'utilise async pour le sendMail
         .get(`https://pollens.fr/risks/thea/counties/${config.countyNumber}`)
         .then(res => {
             console.log(`statusCode: ${res.status}`)
-            // log(res.data) DEBUG
             result = res.data
         })
-    
-    // log(result) DEBUG
 
     color = config.colors[result.riskLevel]
 
