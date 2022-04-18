@@ -19,6 +19,7 @@ function htmlForm(res) {
 }
 
 async function sendMail() { // J'utilise async pour le sendMail
+    log('sendMail on ' + __filename + ' started')
     const transporter = nodemailer.createTransport(config.smtp)
     
     let result = ""

@@ -16,6 +16,7 @@ async function main() {
 async function createLink(url, handler) {
     if(url === undefined || handler === undefined){ log('No url or handler defined for createLink()'); return }
     app.get(url, (req, res) => {
+        log('Request on '+url)
         handler(req, res)
     })
     log(`Link Register : URL : ${url}`)
@@ -23,7 +24,7 @@ async function createLink(url, handler) {
 
 async function startExpress(port) {
     app.listen(port, () => {
-        log('[API OK] Écoute sur http://localhost:' + port)
+        log('Écoute sur http://localhost:' + port)
     })
 }
 
