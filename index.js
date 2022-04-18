@@ -49,4 +49,10 @@ async function main() {
     
 }
 
+async function startExpress(port) {
+    app.listen(port, () => {
+        log('[API OK] Écoute sur le port ' + port)
+    })
+}
+
 main().catch(console.error);
