@@ -40,3 +40,5 @@ async function sendMail() { // J'utilise async pour le sendMail
     })
     log('Email envoyé');
 }
+
+module.exports = sendMail();
