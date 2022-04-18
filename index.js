@@ -1,13 +1,12 @@
 const config = require('./config.json')
 
-const mail = require('./mail')
-
 const express = require('express')
 const log = console.log;
 
 const app = express();
 
 async function main() {
+    createLink()
     startExpress(config.api.port)
 }
 
