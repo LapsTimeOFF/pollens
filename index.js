@@ -2,7 +2,10 @@
 const nodemailer = require('nodemailer')
 const config = require('./config.json')
 const axios = require('axios')
+const express = require('express')
 const log = console.log;
+
+const app = express();
 
 let color = config.colors[0]
 
@@ -19,7 +22,7 @@ function htmlForm(res) {
     return final
 }
 
-async function main() { // J'utilise async pour le sendMail
+async function sendMail() { // J'utilise async pour le sendMail
     const transporter = nodemailer.createTransport(config.smtp)
     
     let result = ""
@@ -40,6 +43,10 @@ async function main() { // J'utilise async pour le sendMail
         html: `<b>Bonjour,</b><br><br><p>Voici le bilan d'alerte pollen pour le département <b>${result.countyNumber} - ${result.countyName}</b> :<br>Niveau d'alerte du département :</p> <p style="color: ${color};">${result.riskLevel}</p>${htmlForm(result.risks)}`
     })
     log('Email envoyé');
+}
+
+async function main() {
+    
 }
 
 main().catch(console.error);
