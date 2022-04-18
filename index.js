@@ -8,7 +8,7 @@ const log = console.log;
 const app = express();
 
 async function main() {
-    createLink('')
+    createLink('/', expressHandler.sendIndex)
     startExpress(config.api.port)
 }
 
