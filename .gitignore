@@ -37,6 +37,8 @@ Temporary Items
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
+# Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,visualstudiocode,windows
 
 ### Node ###
 # Logs
@@ -47,6 +49,8 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
+
+config.json
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -198,10 +202,6 @@ dist
 .ionide
 
 # Support for Project snippet scope
-.vscode/*.code-snippets
-
-# Ignore code-workspaces
-*.code-workspace
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -229,4 +229,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,windows,macos
+# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,windows
