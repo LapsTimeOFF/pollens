@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,windows,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,visualstudiocode,windows,macos
 
@@ -38,6 +39,8 @@ Temporary Items
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
+=======
+>>>>>>> parent of 813f3b8 (Adding <table> <tr> & <td>, Updating .gitignore)
 =======
 >>>>>>> parent of 813f3b8 (Adding <table> <tr> & <td>, Updating .gitignore)
 # Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,windows
