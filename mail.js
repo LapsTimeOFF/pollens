@@ -12,7 +12,7 @@ function htmlForm(res) {
         const risk = res[_i];
         color = config.colors[risk.level]
 
-        final += `<tr><td><u>${risk.pollenName}</u></td> <td><p style="color: ${color};">${risk.level}</p></td></tr>`
+        final += `<u>${risk.pollenName} :</u><br>Niveau : <p style="color: ${color};">${risk.level}</p>`
     }
 
     return final
@@ -37,7 +37,7 @@ module.exports.sendMail = async function () { // J'utilise async pour le sendMai
         from: '"Pollen Info" <'+config.smtp.auth.user+'>', // J'utilise la config pour éviter de leak mon mail perso :|
         to: config.receivers, // Le spam... C'EST MAL. et c'est chiant.
         subject: "Bilan Pollen",
-        html: `<style>table, th, td {border: 1px solid black;}</style><b>Bonjour,</b><br><br><p>Voici le bilan d'alerte pollen pour le département <b>${result.countyNumber} - ${result.countyName}</b> :<br>Niveau d'alerte du département :</p> <p style="color: ${color};">${result.riskLevel}</p><table><tr><td>Pollen :</td><td>Niveau :</td></tr>${htmlForm(result.risks)}</table>`
+        html: `<b>Bonjour,</b><br><br><p>Voici le bilan d'alerte pollen pour le département <b>${result.countyNumber} - ${result.countyName}</b> :<br>Niveau d'alerte du département :</p> <p style="color: ${color};">${result.riskLevel}</p>${htmlForm(result.risks)}`
     })
     log('Email envoyé');
 };
