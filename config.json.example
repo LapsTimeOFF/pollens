@@ -1,0 +1,22 @@
+{
+    "smtp": {
+        "host": "smtp.example.com",
+        "port": 25 or 587,
+        "secure": true or false,
+        "auth": {
+            "user": "email@example.com",
+            "pass": "verygoodpassword"
+        }
+    },
+    "receivers": "autreemail@mail.server",
+    "countyNumber": "31",
+    "colors": [
+        "00aeff",
+        "#00ff00",
+        "#ffee00",
+        "#ff0000" 
+    ],
+    "api": {
+        "port": 1234
+    }
+}
