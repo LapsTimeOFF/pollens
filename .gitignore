@@ -11,6 +11,9 @@
 # Icon must end with two \r
 Icon
 
+# Config file
+config.json
+
 
 # Thumbnails
 ._*
