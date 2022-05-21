@@ -1,6 +1,39 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,visualstudiocode,windows
+# Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,windows,macos
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,visualstudiocode,windows,macos
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### macOS Patch ###
+# iCloud generated files
+*.icloud
 
 ### Node ###
 # Logs
@@ -11,8 +44,6 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
-
-config.json
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -164,6 +195,10 @@ dist
 .ionide
 
 # Support for Project snippet scope
+.vscode/*.code-snippets
+
+# Ignore code-workspaces
+*.code-workspace
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -191,4 +226,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,windows
+# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,windows,macos

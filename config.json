@@ -1,0 +1,22 @@
+{
+    "smtp": {
+        "host": "smtp.orange.fr",
+        "port": 25,
+        "secure": false,
+        "auth": {
+            "user": "quentinmassot@orange.fr",
+            "pass": "Quentin/200931"
+        }
+    },
+    "receivers": "quentinmassot@orange.fr",
+    "countyNumber": "31",
+    "colors": [
+        "00aeff",
+        "#00ff00",
+        "#ffee00",
+        "#ff0000" 
+    ],
+    "api": {
+        "port": 1234
+    }
+}
